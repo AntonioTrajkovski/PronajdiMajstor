@@ -1,0 +1,140 @@
+<!-- ======= Hero Section ======= -->
+<th:block xmlns:th="http://www.thymeleaf.org">
+<section id="hero">
+    <div class="hero-container">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <ol id="carousel-indicators" class="carousel-indicators" >
+                <li  data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" ></li>
+                <li  data-bs-target="#heroCarousel" data-bs-slide-to="1" ></li>
+                <li  data-bs-target="#heroCarousel" data-bs-slide-to="2" ></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background: url(assets/img/slide-1.jpg)">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2 >Добредојдовте на <span>Твој Мајстор</span></h2>
+                            <p>Твој Мајстор го креирав со цел да ги поврзам добрите македонски мајстори со секој клиент кој има некаква потреба.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background: url(assets/img/slide-2.png)">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>За <span>Корисниците</span></h2>
+                            <p>Секој корисник отсега па натаму, ќе има можност на многу лесен и ефикасен начин да најде соодветен понудувач на услуга за која има потреба.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background: url(assets/img/slide-3.jpg)">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2>За <span>Понудувачите</span></h2>
+                            <p>За понудувачите има бројни придобивки што ќе го поддржи нивниот бизнис и ќе им помогне да станат признати како лидери на пазарот</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i>Овозможување дигитализација на понудувачите на услуги.</li>
+                        <li><i class="bi bi-check-circle"></i>Експертска деловна поддршка.</li>
+                        <li><i class="bi bi-check-circle"></i>База со понудувачи од најразлични категории.</li>
+                        <li><i class="bi bi-check-circle"></i>Со неколку кликања до потврдени понудувачи.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Featured Section ======= -->
+    <section id="featured" class="featured">
+        <div class="container">
+
+            <div class="row h-100 justify-content-center align-items-center">
+                <h2 class="text-center">Како работи Твој Мајстор</h2>
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="icon-box">
+                        <i  class="bi bi-search"></i>
+                        <h3>Изберете Категорија</h3>
+                        <p>Едноставно навигирајте во делот за категории и изберете ја соодветната и потоа изберете го најдобриот мајстор.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <i class="bi bi-chat-square-dots"></i>
+                        <h3>Воспоставување на контакт</h3>
+                        <p>Контактирајте го соодветниот понудувач на услуга и опишете ја вашата задача.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <i class="bi bi-star-fill"></i>
+                        <h3>Оценете и препорачајте мајстор</h3>
+                        <p>На крајот, во зависност од квалитетот на услугата оценете го понудувачот на услуга.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Featured Section -->
+
+    <!-- Owl Carousel -->
+    <div class="container mt-5">
+
+        <div class="row h-100 justify-content-center align-items-center">
+            <h2 class="text-center">Категории</h2>
+        </div>
+        <div th:if="${categoryList} != null" class="owl-carousel owl-theme">
+            <div th:each="cat: ${categoryList}" class="ms-2 me-2">
+                <div class="card shadow">
+                    <a th:href="@{'/subCategory/{id}' (id=${cat.getId()})}">    <img th:src="${cat.getImgReference()}" class="card-img-top "></a>
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${cat.name}" ></h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+</th:block>

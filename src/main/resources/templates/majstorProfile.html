@@ -1,0 +1,110 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <main id="main">
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <ol>
+                    <li><a href="#">Почетна</a></li>
+                    <li>Профил</li>
+                </ol>
+                <h2 th:text="${majstor.korisnik.getName() + ' ' + majstor.korisnik.getSurname()}"  ></h2>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+
+        <section class="search-sec ">
+            <div class="container">
+                <form action="" method="POST">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row justify-content-center align-items-center">
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                                    <select class="form-select search-slt">
+                                        <option>Select Drop City</option>
+                                        <option>Example one</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 p-1">
+                                    <select  id="cityNameList" name="city" class="form-select search-slt">
+                                        <option value="" disabled selected>Избери град</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                    <button type="button" class="btn btn-primary wrn-btn"><i class="fa fa-search"></i> Пребарај</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <div class="container rounded bg-white mt-5 mb-5">
+
+            <form class="row" th:method="POST" th:action="@{'/update/{id}/majstor' (id=${majstor?.getId()})}">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                        <img  class="rounded-circle mt-5" width="150px"  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+                        <span class="font-weight-bold" th:text="${majstor.korisnik.getUsername()}"></span>
+                        <span class="text-black-50" th:text="${majstor.korisnik.getEmail()}"></span>
+                        <span>Оцена: (1-10) <span th:text="${raiting}"></span> </span>
+                    </div>
+                </div>
+                <div class="col-md-5 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Поставки за профил</h4>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6"><label class="labels">Име</label><input  th:value="${majstor.korisnik.name}" name="name" type="text" class="form-control" value=""></div>
+                            <div class="col-md-6"><label class="labels">Презиме</label><input th:value="${majstor.korisnik.surname}"  name="surname" type="text" class="form-control" value=""></div>
+                            <div class="col-md-12"><label class="labels">Email</label><input th:value="${majstor.korisnik.getEmail()}" name="email" type="text" class="form-control" value=""></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12"><label class="labels">Тел-Број</label><input th:value="${majstor.telNumber}"  name="telNumber" type="text" class="form-control" ></div>
+                            <div class="col-md-12"><label class="labels">Град</label><input th:value="${majstor.city}"   name="city" type="text" class="form-control" ></div>
+                            <div class="col-md-12"><label class="labels">Адреса</label><input <input th:value="${majstor.address}" name="address" type="text" class="form-control" ></div>
+                            <div class="col-md-12"><label class="labels">Име на фирма</label><input <input th:value="${majstor.nameOfFirm}" name="nameOfFirm" type="text" class="form-control" ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 py-5">
+                        <div class="row mt-2">
+                            <div class="col-md-9"><label class="labels">Краток опис:</label>
+                                <div class="form-outline">
+                                    <textarea th:text="${majstor.shortDescription}" name="shortDesc" class="form-control" id="textAreaExample1" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                                <div class="form-outline">
+                                    <div class="search_select_box">
+                                        <span>Подкатегории: </span>
+                                        <select id="categoryList" multiple name="subCatIds" class="form-select form-control-lg">
+                                           <!-- <option value="" disabled selected>Избери подкатегорија</option> -->
+                                            <option
+                                            th:if="${subcategoryList} != null"
+                                            th:each="cat:${subcategoryList}"
+                                            th:selected="${majstor.subcategories != null && majstor.subcategories.contains(cat)}"
+                                            th:value="${cat.getId()}"
+                                            th:text="${cat.name}"
+                                            ></option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Зачувај Промени</button></div>
+            </form>
+
+        </div>
+        </div>
+        </div>
+
+    </main>
+</th:block>

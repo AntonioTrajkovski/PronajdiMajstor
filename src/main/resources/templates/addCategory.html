@@ -1,0 +1,30 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+<main id="main">
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+        <ol>
+            <li><a href="#">Почетна</a></li>
+            <li>Додади Категорија</li>
+        </ol>
+        <h2>Додади Нова Категорија</h2>
+
+    </div>
+</section><!-- End Breadcrumbs -->
+<form class="mb-5" th:method="POST"  th:action="@{'/createCategory/{id}' (id=${category?.getId()})}">
+    <div class="form-group mx-sm-3">
+        <label for="addCategory">Внеси Име На Категорија</label>
+        <input required th:value="${category?.getName()}" name="name" type="text" class="form-control" id="addCategory" style="width:500px ">
+    </div>
+    <div class="form-group mx-sm-3">
+        <label for="addCategory">Внеси Слика</label>
+        <input required th:value="${category?.getImgReference()}" name="imgRef" type="text" class="form-control"  style="width:500px ">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary ml-3">Submit</button>
+</form>
+</main>
+</th:block>

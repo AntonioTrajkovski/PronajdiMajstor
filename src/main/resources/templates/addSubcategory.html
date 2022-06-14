@@ -1,0 +1,42 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="#">Почетна</a></li>
+                <li>Додади Подкатегорија</li>
+            </ol>
+            <h2>Додади Нова Подкатегорија</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <form class="mb-5" th:method="POST" th:action="@{'/createSubCategory/{id}' (id=${subcategory?.getId()})}">
+        <div class="form-group mx-sm-3">
+            <label for="addSubCategory">Внеси име на подкатегорија</label>
+            <input required th:value="${subcategory?.name}" name="name" type="text" class="form-control" id="addSubCategory" style="width:500px ">
+        </div>
+
+        <div class="form-group mx-sm-3">
+            <label for="addSubCategory">Внеси Слика</label>
+            <input required th:value="${subcategory?.getImgReference()}" name="imgRef" type="text" class="form-control"  style="width:500px ">
+        </div>
+
+        <div class="form-group mx-sm-3">
+           <p>Избери ја соодветната категорија</p>
+            <select name="categoryId" class="form-control" style="width: 500px">
+                <option
+                        th:selected="${subcategory?.getCategory() != null && cat.getId() == subcategory.getCategory().getId()}"
+                        th:each="cat: ${categoryList}"
+                        th:text="${cat.name}"
+                        th:value="${cat.id}" >
+
+                </option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary ml-3">Submit</button>
+    </form>
+</main>
+</th:block>

@@ -1,0 +1,49 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="#">Почетна</a></li>
+                <li>Најави се</li>
+            </ol>
+            <h2>Најави се</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <div class="container">
+        <div id="login" class="row align-items-center justify-content-center">
+            <div class="col-sm-8 col-md-6 col-lg-4 bg-white rounded p-4 shadow">
+                <div class="row justify-content-center mb-4">
+                    <img src="assets/img/logo.png" class="w-25"/>
+                </div>
+                <form method="post" action="/login">
+                    <div >
+                        <div th:text="${param.error}" class="text-danger"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Корисничко име</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Лозинка</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" />
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <div class="modal-footer d-block">
+                        <p> <a href="#">Регистрирај се</a> | <a href="#">Ја заборави лозинката?</a></p>
+                        <button type="submit" class="btn btn-warning float-end">Најава</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+</th:block>

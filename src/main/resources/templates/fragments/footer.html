@@ -1,0 +1,75 @@
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Корисни линкови</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/home">Почетна</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/category">Категории</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/aboutUs">За нас</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Политика на приватност</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>Контакт информации</h4>
+                    <p>
+                        Северна Македонија <br><br>
+
+                        <strong>Телефон:</strong> <br>
+                        <strong>Електронска пошта:</strong> info@pronajdiMajstor.com<br>
+                    </p>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-info">
+                    <h3>За нас</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            Сите права се задржани | Developed by: Antonio Trajkovski
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<!-- Modal -->
+<div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form class="modal-dialog" th:method="POST" action="/login">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Најави се</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label class="form-label">Корисничко име</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Лозинка</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" />
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <div class="modal-footer d-block">
+                        <p> <a href="#">Регистрирај се</a> | <a href="#">Ја заборави лозинката?</a></p>
+                        <button type="submit" class="btn btn-warning float-end">Најава</button>
+                    </div>
+
+            </div>
+        </div>
+    </form>
+</div>

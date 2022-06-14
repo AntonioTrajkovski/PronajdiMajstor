@@ -1,0 +1,88 @@
+
+<!-- ======= Top Bar ======= -->
+
+<nav id="topbar" class="navbar navbar-expand-lg navbar-dark" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <div class="container">
+
+        <div class="contact-info">
+            <i class="bi bi-envelope d-flex align-items-center"> <a href="mailto:contact@example.com"> contact@pronajdiMajstor.com</a></i>
+        </div>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu" >
+            <span class="bi bi-person-circle"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="social-links navbar-nav ms-auto" >
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-instagram"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi-facebook"></i></a>
+                </li>
+
+                <li class="nav-item"  sec:authorize="!isAuthenticated()">
+                    <a href="/login" class="nav-link " data-bs-toggle="modal" data-bs-target="#modalForm">
+                        <i class="bi-person"></i> Најави се</a>
+                </li>
+
+                <li class="nav-item"  sec:authorize="isAuthenticated()">
+                    <a href="/logout" class="nav-link ">
+                        <i class="bi-person"></i>Одјави се</a>
+                </li>
+
+
+                <li class="nav-item"  sec:authorize="!isAuthenticated()">
+                    <a href="/register" class="nav-link"> <i class="bi-person-plus">
+                    </i> Регистрирај се</a>
+                </li>
+
+                <li class="nav-item"  sec:authorize="hasAnyRole('ROLE_ADMIN', 'ROLE_CLIENT')">
+                    <a href="/clientProfile" class="nav-link"> <i class="bi-person-plus">
+                    </i>Поставки за профил</a>
+                </li>
+
+                <li class="nav-item"  sec:authorize="hasRole('ROLE_MAJSTOR')">
+                    <a href="/majstorProfile" class="nav-link"> <i class="bi-person-plus">
+                    </i>Поставки за профил</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="navbar navbar-expand-lg navbar-light sticky-top">
+
+    <div class="container">
+
+
+        <div class="logo">
+            <a href="/home"><img src="assets/img/logo.png" alt="Logo" class="img-fluid"></a>
+        </div>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenuSecond" >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenuSecond">
+            <ul class="navbar-nav ms-auto" id="menu">
+                <li><a href="/home">Почетна</a></li>
+                <li><a href="/category">Категории</a></li>
+                <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/addCategory">Додади категорија</a></li>
+                <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="/addSubCategory">Додади подкатегорија</a></li>
+                <li><a href="/aboutUs">За нас</a></li>
+                <li><a href="/contact">Контакт</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

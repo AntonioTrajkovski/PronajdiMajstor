@@ -1,0 +1,869 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+
+a {
+    color: wheat;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e6573f;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+#topbar {
+    background: #545454;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+#topbar .contact-info i {
+    font-style: normal;
+    color: #e96b56;
+}
+
+#topbar .contact-info i a, #topbar .contact-info i span {
+    padding-left: 5px;
+    color: #fff;
+}
+#topbar .contact-info i a {
+    line-height: 0;
+    transition: 0.3s;
+}
+#topbar .contact-info i a:hover {
+    color: #e96b56;
+}
+#topbar .social-links a {
+    color: #bababa;
+    line-height: 0;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+#topbar .social-links a:hover {
+    color: white;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    /*height: 70px;*/
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #f2f2f2;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+#header .logo h1 {
+    font-size: 26px;
+    padding: 0 0 0 8px;
+    margin: 11px 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    border-left: 8px solid #e96b56;
+}
+#header .logo h1 a, #header .logo h1 a:hover {
+    color: #545454;
+    text-decoration: none;
+}
+#header .logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.scrolled-offset {
+    margin-top: 70px;
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+#menu > li > a{
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar {
+    padding: 0;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.navbar li {
+    position: relative;
+}
+.navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #545454;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.navbar a i, .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #e96b56;
+}
+.navbar .getstarted, .navbar .getstarted:focus {
+    background: #e96b56;
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 4px;
+    color: #fff;
+}
+.navbar .getstarted:hover, .navbar .getstarted:focus:hover {
+    color: #fff;
+    background: #ec7f6d;
+}
+
+#footer {
+
+    background: #404040;
+    padding: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+}
+#footer .footer-newsletter {
+    padding: 50px 0;
+    background: #404040;
+}
+#footer .footer-newsletter h4 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+}
+#footer .footer-newsletter form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+}
+#footer .footer-newsletter form input[type=email] {
+    border: 0;
+    padding: 8px;
+    width: calc(100% - 140px);
+}
+#footer .footer-newsletter form input[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 30px;
+    margin: 3px;
+    background: #e96b56;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+#footer .footer-newsletter form input[type=submit]:hover {
+    background: #e6573f;
+}
+#footer .footer-top {
+
+    background: #3b3b3b;
+    border-top: 1px solid #474747;
+    border-bottom: 1px solid #474747;
+    padding: 60px 0 30px 0;
+}
+#footer .footer-top .footer-info {
+    margin-bottom: 30px;
+}
+#footer .footer-top .footer-info h3 {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+}
+#footer .footer-top .footer-info p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+}
+#footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #545454;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+#footer .footer-top .social-links a:hover {
+    background: #e96b56;
+    color: #fff;
+    text-decoration: none;
+}
+#footer .footer-top h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 12px;
+}
+#footer .footer-top .footer-links {
+    margin-bottom: 30px;
+}
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#footer .footer-top .footer-links ul i {
+    padding-right: 2px;
+    color: #ec7f6d;
+    font-size: 18px;
+    line-height: 1;
+}
+#footer .footer-top .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+#footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+}
+#footer .footer-top .footer-links ul a {
+    color: #fff;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+}
+#footer .footer-top .footer-links ul a:hover {
+    color: #e96b56;
+}
+#footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+}
+#footer .footer-top .footer-contact p {
+    line-height: 26px;
+}
+#footer .copyright {
+    text-align: center;
+    padding-top: 30px;
+}
+#footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(59, 59, 59, 0.8);
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+#hero .carousel-item {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#hero .carousel-item::before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+#hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 120px;
+}
+#hero .carousel-content {
+    text-align: center;
+}
+#hero h2 {
+    color: #2e2e2e;
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: 700;
+}
+#hero h2 span {
+    color: #e96b56;
+}
+#hero p {
+    width: 80%;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    margin: 0 auto 30px auto;
+}
+#hero .carousel-inner .carousel-item {
+    transition-property: opacity;
+    background-position: center top;
+}
+#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 48px;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    color: #545454;
+}
+#hero .carousel-indicators li {
+    cursor: pointer;
+    background: #e96b56;
+    overflow: hidden;
+    border: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    margin-bottom: 180px;
+    opacity: 0.2;
+}
+#hero .carousel-indicators li.active {
+    opacity: 1;
+}
+#hero .btn-get-started:hover {
+    background: transparent;
+    color: #e96b56;
+    text-decoration: none;
+}
+@media (max-height: 768px), (max-width: 1200px) {
+    #hero {
+        margin-bottom: 60px;
+    }
+    #hero .carousel-container {
+        padding-bottom: 0;
+    }
+    #hero .carousel-indicators li {
+        margin-bottom: 0;
+    }
+}
+@media (max-width: 768px) {
+    #hero {
+        height: 90vh;
+    }
+    #hero .carousel-item {
+        height: 90vh;
+    }
+}
+@media (min-width: 1024px) {
+    #hero p {
+        width: 50%;
+    }
+    #hero .carousel-control-prev, #hero .carousel-control-next {
+        width: 5%;
+    }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+.about .content h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: #545454;
+}
+.about .content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+.about .content ul li {
+    padding-bottom: 50px;
+}
+.about .content ul i {
+    font-size: 29px;
+    padding-right: 4px;
+    color: #e96b56;
+}
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Featured
+--------------------------------------------------------------*/
+.featured {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 5px;
+}
+.text-center{
+    padding-top: 25px;
+}
+.featured .icon-box {
+    padding: 40px 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background: #fff;
+    transition: all ease-in-out 0.3s;
+    height: 100%;
+}
+.featured .icon-box i {
+    color: #e96b56;
+    font-size: 42px;
+    margin-bottom: 15px;
+    display: block;
+    line-height: 0;
+}
+.featured .icon-box h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.featured .icon-box h3 a {
+    color: #545454;
+    transition: 0.3s;
+}
+.featured .icon-box p {
+    color: #545454;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.featured .icon-box:hover {
+    background: #e96b56;
+}
+.featured .icon-box:hover i, .featured .icon-box:hover h3 a, .featured .icon-box:hover p {
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# LoginForm
+--------------------------------------------------------------*/
+#login{
+    padding-bottom: 100px;
+}
+
+#login > div > form > button{
+    background: #45aba6;
+  /*  padding: 11px 50px;*/
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    border-radius: 44px;
+    width: 100%;
+    height: 56px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#login > div > form > button:hover{
+    background-color: #378884;
+}
+#login > div > p > a{
+    color: black;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#login > div > p > a:hover{
+    color: #e96b56;
+    font-size: 15px;
+}
+
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+    padding: 20px 0 20px 0;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 40px;
+}
+.breadcrumbs h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #545454;
+}
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 0 5px 0;
+    margin: 0;
+    font-size: 14px;
+}
+.breadcrumbs ol li + li {
+    padding-left: 10px;
+}
+.breadcrumbs ol li + li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #6e6e6e;
+    content: "/";
+}
+
+/*--------------------------------------------------------------
+# Register
+--------------------------------------------------------------*/
+#register{
+    padding-bottom: 100px;
+}
+#register  form  div.mt-4.pt-2 > button {
+    background: #45aba6;
+   /* padding: 5px 25px;*/
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 20px;
+    border-radius: 44px;
+    width: 100%;
+    height: 56px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#register  form  div.mt-4.pt-2 > button:hover{
+    background-color: #378884;
+}
+
+#register  div  p > a{
+    color: black;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#register  div  p > a:hover{
+    color: #e96b56;
+    font-size: 15px;
+}
+#register div > img{
+    width: 90px;
+    height: 60px;
+}
+
+#regMenu a{
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+    background: #efecec;
+    padding: 10px 50px 10px 50px;
+    border-radius: 15px;
+}
+
+#regMenu a:hover{
+    color: #e96b56;
+    background: #d0cece;
+    padding: 10px 50px 10px 50px;
+    border-radius: 15px;
+
+}
+
+#regMenu a.active{
+    color: #e96b56;
+    background: #d0cece;
+    padding: 10px 50px 10px 50px;
+    border-radius: 15px;
+
+}
+#regLabel label{
+    font-size: 10px;
+}
+#regLabel2 label{
+    font-size: 10px;
+}
+#client-form{
+    display: none;
+}
+
+.search_select_box{
+    margin-top: 15px;
+}
+
+#pwSpace{
+    padding-top: 15px;
+}
+.descPw{
+    font-size: 10px;
+}
+#register > div > div > div > div > div > div.panel-heading{
+    margin-top: -50px;
+}
+
+#categoryList{
+height: 150px;
+}
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact  form   button {
+    background: #45aba6;
+    /* padding: 5px 25px;*/
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 20px;
+    border-radius: 44px;
+    width: 100%;
+    height: 56px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#contact  form  button:hover{
+    background-color: #378884;
+}
+#contact{
+    padding-bottom: 100px;
+}
+/*--------------------------------------------------------------
+# owl-carousel
+--------------------------------------------------------------*/
+
+.card-img-top{
+    height: 20vh;
+    width: 100%;
+    object-fit: cover;
+
+}
+/*
+.owl-prev{
+    left: -20px;
+}
+.owl-next{
+    right: -20px;
+}
+.owl-prev, .owl-next{
+    position: absolute;
+    top: 80px;
+}
+.owl-prev span, .owl-next span{
+    font-size: 80px;
+    color: black;
+}
+*/
+#main > div > div > div.owl-nav > button.owl-prev{
+    position: absolute;
+    left: -27px;
+    top: 33%;
+    border: 5px solid #fff;
+    text-align: center;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: 0;
+    background: #ff5e14;
+    transition: all 0.3s;
+    color: #fff;
+}
+#main > div > div > div.owl-nav > button.owl-prev {
+    position: absolute;
+    left: -27px;
+    top: 33%;
+    border: 5px solid #fff;
+    text-align: center;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: 0;
+    background: #ff5e14;
+    transition: all 0.3s;
+    color: #fff;
+}
+#main > div > div > div.owl-nav > button.owl-prev span {
+    font-size: 25px;
+    margin-top: -6px;
+    display: inline-block;
+}
+#main > div > div > div.owl-nav > button.owl-prev:hover {
+    background: #fff;
+    border-color: #ff5e14;
+    color: #ff5e14;
+}
+#main > div > div > div.owl-nav > button.owl-next {
+    position: absolute;
+    right: -27px;
+    top: 33%;
+    border: 5px solid #fff;
+    text-align: center;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: 0;
+    background: #ff5e14;
+    color: #fff;
+    transition: all 0.3s;
+}
+#main > div > div > div.owl-nav > button.owl-next span {
+    font-size: 25px;
+    margin-top: -6px;
+    display: inline-block;
+}
+#main > div > div > div.owl-nav > button.owl-next:hover {
+    background: #fff;
+    border-color: #ff5e14;
+    color: #ff5e14;
+}
+/*--------------------------------------------------------------
+# search box css start here*
+--------------------------------------------------------------*/
+.search-sec{
+    background: lavender;
+    padding: 1rem;
+    margin-top: -40px;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:5px;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:5px;
+}
+
+#main > section.search-sec > div > form > div > div > div > div{
+   width:300px;
+}
+
+/*--------------------------------------------------------------
+# category cards css start here
+--------------------------------------------------------------*/
+
+#category_card .card {
+    background: #222;
+    border: 1px solid black;
+    color: rgba(250, 250, 250, 0.8);
+    margin-bottom: 2rem;
+}
+/*--------------------------------------------------------------
+# majstori cards css start here
+--------------------------------------------------------------*/
+
+.card-box {
+  /* padding: 10px;*/
+    border-radius: 3px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    margin-top: 10px;
+}
+.thumb-lg {
+    height: 100px;
+    width: 100px;
+}
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*--------------------------------------------------------------
+# profile css start here
+--------------------------------------------------------------*/
+
+.effect {
+    color: blue;
+}
+.effect:hover{
+    font-weight: bold;
+    color: blue;
+}
+
+/*--------------------------------------------------------------
+# rating majstor css start here
+--------------------------------------------------------------*/
+
+.rating{
+   display: flex;
+    transform: rotateY(180deg);
+    padding-left: 50px;
+}
+.rating input{
+    display: none;
+}
+.rating label{
+     display: block;
+    cursor: pointer;
+    width: 50px;
+
+}
+.rating label:before{
+    content: '\f005'; /* the star*/
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    color: #101010;
+}
+.rating label:after{
+    content: '\f005'; /* the star*/
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    color: #1f9cff;
+    top: -24px;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after
+{
+    opacity: 1;
+}

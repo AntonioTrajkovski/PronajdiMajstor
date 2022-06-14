@@ -1,0 +1,88 @@
+<th:block xmlns:th="http://www.thymeleaf.org">
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="#">Почетна</a></li>
+                <li>Контакт</li>
+            </ol>
+            <h2>Контакт</h2>
+
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <div class="container">
+        <div id="contact" class="row align-items-center justify-content-center">
+            <div class="col-sm-8 col-md-6 col-lg-4 bg-white rounded p-4 shadow ">
+                <div class="row justify-content-center mb-4">
+                    <img src="assets/img/logo.png" class="w-25"/>
+                </div>
+                <form action="/contact" method="POST">
+                    <h3 style="text-align: center;">Контактирајте не</h3>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white"><i class="fa fa-user"></i>&nbsp</span>
+                                    </div>
+                                    <input name="name" type="name" placeholder="Име" class="form-control border-left-0" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white"><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <input name="lastName" type="text" placeholder="Презиме" class="form-control border-left-0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-outline mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white"><i class="fa fa-envelope"></i></span>
+                                </div>
+                                <input name="email" type="email" placeholder="Email" class="form-control border-left-0" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-outline mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-white"></span>
+                                </div>
+                                <input name="subject" type="text" placeholder="Предмет" class="form-control border-left-0" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Enter message" required></textarea>
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary float-right ">
+                        <i class="fa fa-paper-plane"></i>
+                        Испрати
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+</th:block>
+
+
